@@ -1,0 +1,75 @@
+[
+    {
+        "id": 1,
+        "title": "ഭരണഘടന: ചരിത്ര വഴികൾ",
+        "thumbnail": "https://via.placeholder.com/300x200.png?text=Sacred+Sites",
+        "description": "Explore the historical pathways of the Hajj pilgrimage.",
+        "fullDescription": "This exhibit traces the historical routes and traditions of the Hajj, showcasing ancient practices and their evolution.",
+        "images": [
+            "assets/seven.jpg"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Visions of the Future",
+        "thumbnail": "https://via.placeholder.com/300x200.png?text=Future+Hajj",
+        "description": "A look at how Hajj might evolve with modern technology.",
+        "fullDescription": "Discover how modern innovations are shaping the future of the Hajj pilgrimage, from virtual tours to advanced logistics.",
+        "images": [
+            "https://via.placeholder.com/800x400.png?text=Future+Image+1",
+            "https://via.placeholder.com/800x400.png?text=Future+Image+2"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Pilgrim Stories",
+        "thumbnail": "https://via.placeholder.com/300x200.png?text=Pilgrim+Stories",
+        "description": "Personal accounts from Hajj pilgrims.",
+        "fullDescription": "Hear the inspiring stories of pilgrims who have undertaken the sacred journey to Mecca.",
+        "images": [
+            "https://via.placeholder.com/800x400.png?text=Story+Image+1"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Sacred Sites",
+        "thumbnail": "https://via.placeholder.com/300x200.png?text=Sacred+Sites",
+        "description": "Key locations of the Hajj pilgrimage.",
+        "fullDescription": "A detailed look at the sacred sites visited during Hajj, including the Kaaba and Arafat.",
+        "images": [
+            "https://via.placeholder.com/800x400.png?text=Site+Image+1",
+            "https://via.placeholder.com/800x400.png?text=Site+Image+2"
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Rituals and Traditions",
+        "thumbnail": "https://via.placeholder.com/300x200.png?text=Rituals",
+        "description": "The core rituals of Hajj explained.",
+        "fullDescription": "Learn about the essential rituals of Hajj, from Tawaf to the Day of Arafah.",
+        "images": [
+            "https://via.placeholder.com/800x400.png?text=Ritual+Image+1"
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Art of the Hajj",
+        "thumbnail": "https://via.placeholder.com/300x200.png?text=Hajj+Art",
+        "description": "Artistic depictions of the pilgrimage.",
+        "fullDescription": "Explore beautiful artworks inspired by the Hajj, from calligraphy to paintings.",
+        "images": [
+            "https://via.placeholder.com/800x400.png?text=Art+Image+1",
+            "https://via.placeholder.com/800x400.png?text=Art+Image+2"
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Hajj Through Time",
+        "thumbnail": "https://via.placeholder.com/300x200.png?text=Hajj+Time",
+        "description": "A timeline of Hajj's history.",
+        "fullDescription": "A chronological journey through the history of Hajj, highlighting key moments and changes.",
+        "images": [
+            "https://via.placeholder.com/800x400.png?text=Timeline+Image+1"
+        ]
+    }
+]

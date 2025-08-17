@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Expo Guide - Old Hajj</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div id="splash-screen" class="splash-screen">
+        <img src="assets/logo.png" alt="Campus Logo" class="mb-4" loading="lazy" />
+        <h1 class="text-4xl font-bold text-white">Campus Expo</h1>
+        <h2 class="text-lg text-white mt-2">Loading exhibits...</h2>
+        <h3 class="text-sm text-white mt-2">Presented by Dn Campus</h3>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 bg-[#8b5e34] text-white p-4 shadow-md z-40">
+        <h1 class="text-2xl font-bold text-center">Campus Expo Guide - Old Hajj</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="container mx-auto p-6">
+        <!-- Home Page -->
+        <section id="home-page" class="fade-in">
+            <h2 class="text-3xl font-semibold text-center mb-8">Welcome to the Old Hajj Expo</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="rooms/Room1.html" class="room-card bg-white p-4 rounded-lg shadow-md slide-up block">
+                    <img src="assets/seven.jpg" alt="Room 1" class="w-full h-48 object-cover rounded-md mb-4" loading="lazy">
+                    <h3 class="text-xl font-semibold">ബാബു ബനീ ശൈബ</h3>
+                    <p class="text-gray-600">പുരാതന കഅബയുടെ കവാടം.</p>
+                </a>
+                <a href="rooms/Room2.html" class="room-card bg-white p-4 rounded-lg shadow-md slide-up block">
+                    <img src="assets/seven.jpg" alt="Room 1" class="w-full h-48 object-cover rounded-md mb-4" loading="lazy">
+                    <h3 class="text-xl font-semibold">ബാബു ബനീ ശൈബ</h3>
+                    <p class="text-gray-600">പുരാതന കഅബയുടെ കവാടം.</p>
+                </a>
+                <a href="rooms/Room6.html" class="room-card bg-white p-4 rounded-lg shadow-md slide-up block">
+                    <img src="assets/seven.jpg" alt="Room 2" class="w-full h-48 object-cover rounded-md mb-4" loading="lazy">
+                    <h3 class="text-xl font-semibold">എന്താണ് മുസ്ദലിഫ?</h3>
+                    <p class="text-gray-600">മുസ്ദലിഫയുടെ ചരിത്ര പശ്ചാതലം, വികസനങ്ങൾ .</p>
+                </a>
+                <!-- Repeat for rooms 2-8 -->
+                <a href="video-guide.html" class="room-card bg-white p-4 rounded-lg shadow-md slide-up block">
+                    <img src="assets/video-guide.jpg" alt="Video Guide" class="w-full h-48 object-cover rounded-md mb-4" loading="lazy">
+                    <h3 class="text-xl font-semibold">Video Guide</h3>
+                    <p class="text-gray-600">Watch the video guide for the expo.</p>
+                </a>
+                
+            </div>
+        </section>
+
+        <!-- Room Detail Page -->
+        <section id="room-detail" class="hidden fade-in">
+            <h2 id="room-title" class="text-3xl font-semibold mb-4"></h2>
+            <p id="room-description" class="text-lg mb-6"></p>
+            <div id="room-images" class="space-y-4"></div>
+            <a href="#" id="back-link" class="text-[#8b5e34] hover:underline mt-6 inline-block">Back to All Rooms</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#8b5e34] text-white text-center p-4 fixed bottom-0 w-full">
+        <p>&copy; 2025 Dn Campus. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

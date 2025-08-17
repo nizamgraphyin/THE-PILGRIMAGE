@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room 1 - Campus Expo Guide</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background: #f5f0e1;
+        }
+        body {
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+        }
+        .page {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            scroll-snap-align: start;
+            background: #fff;
+        }
+        canvas {
+            max-height: 95vh;
+            max-width: 95vw;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background: #fff;
+        }
+        .back-link {
+            position: fixed;
+            top: 16px;
+            left: 16px;
+            z-index: 1000;
+            background: #8b5e34;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html" class="back-link">← Back to All Rooms</a>
+    <script type="module">
+        import * as pdfjsLib from '../assets/pdfjs/pdf.mjs';
+
+        pdfjsLib.GlobalWorkerOptions.workerSrc = '../assets/pdfjs/pdf.worker.mjs';
+
+        const pdfUrl = '../assets/MUZDALIFA.pdf'; // Make sure this path is correct
+
+        async function loadPdf() {
+            try {
+                console.log("Attempting to load PDF from:", pdfUrl);
+                const loadingTask = pdfjsLib.getDocument(pdfUrl);
+                const pdf = await loadingTask.promise;
+                console.log("PDF loaded successfully. Number of pages:", pdf.numPages);
+
+                for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+                    const pageDiv = document.createElement('div');
+                    pageDiv.className = 'page';
+                    document.body.appendChild(pageDiv);
+
+                    const page = await pdf.getPage(pageNum);
+                    const viewport = page.getViewport({ scale: 1 });
+
+                    // Scale to fit the full viewport while preserving aspect ratio
+                    const scaleX = window.innerWidth / viewport.width;
+                    const scaleY = window.innerHeight / viewport.height;
+                    const scale = Math.min(scaleX, scaleY);
+                    const scaledViewport = page.getViewport({ scale });
+
+                    const canvas = document.createElement('canvas');
+                    canvas.height = scaledViewport.height;
+                    canvas.width = scaledViewport.width;
+                    pageDiv.appendChild(canvas);
+
+                    const renderContext = {
+                        canvasContext: canvas.getContext('2d'),
+                        viewport: scaledViewport
+                    };
+                    await page.render(renderContext).promise;
+                    console.log(`Page ${pageNum} rendered successfully.`);
+                }
+            } catch (error) {
+                console.error("Error loading or rendering PDF:", error);
+            }
+        }
+
+        loadPdf();
+    </script>
+</body>
+</html>
